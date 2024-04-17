@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calculator-client-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: calculator-client
+  template:
+    metadata:
+      labels:
+        app: calculator-client
+    spec:
+      containers:
+      - name: calculator-client
+        image: <your-javascript-docker-registry>/calculator-client:<tag>
+        env:
+        - name: ADDITION_SERVICE_HOST
+          value: addition-service
+        - name: CALCULATOR_SERVICE_PORT
+          value: "8080"
+        ports:
+        - containerPort: 3000
