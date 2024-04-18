@@ -1,7 +1,7 @@
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = DemoApplication.class)
-class DemoApplicationTests {
+@SpringBootTest
+public class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
