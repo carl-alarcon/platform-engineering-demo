@@ -1,15 +1,11 @@
-# Use an OpenJDK 8 JRE base image
-FROM openjdk:8-jre-alpine
+# Our base image that contains OpenJDK
+FROM openjdk 
 
-# Set the working directory
-ARG JAR_FILE=target/*.jar
-WORKDIR /app
+# Add the fatjar in the image
+COPY target/demo-0.0.1-SNAPSHOT.jar / 
 
-# Copy the JAR file to the working directory
-COPY ${JAR_FILE} ./
-
-# Set the command to run the JAR file
-ENTRYPOINT ["java","-jar","/app/target/demo-0.0.1-SNAPSHOT.jar"]
+# Default command
+CMD java -jar /demo-0.0.1-SNAPSHOT.jar
 
 # Expose the port that the application will run on
 EXPOSE 8080
