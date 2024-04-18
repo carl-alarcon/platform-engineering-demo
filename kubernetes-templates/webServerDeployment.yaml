@@ -16,7 +16,7 @@ spec:
       - name: calculator-client
         image: <your-javascript-docker-registry>/calculator-client:<tag>
         env:
-        - name: ADDITION_SERVICE_HOST
+        - name: ADDITION_SERVICE
           value: addition-service
         - name: CALCULATOR_SERVICE_PORT
           value: "8080"
