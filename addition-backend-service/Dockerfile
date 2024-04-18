@@ -9,7 +9,7 @@ WORKDIR /app
 COPY ${JAR_FILE} ./
 
 # Set the command to run the JAR file
-ENTRYPOINT ["java","-jar","/app/target/calculator-service.jar"]
+ENTRYPOINT ["java","-jar","/app/target/demo-0.0.1-SNAPSHOT.jar"]
 
 # Expose the port that the application will run on
 EXPOSE 8080
