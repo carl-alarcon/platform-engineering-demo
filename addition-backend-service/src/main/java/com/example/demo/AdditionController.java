@@ -14,3 +14,4 @@ public class AdditionController {
 class CalculatorRequest {
     private double number1;
     private double number2;
+}
