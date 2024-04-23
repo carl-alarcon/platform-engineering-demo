@@ -17,3 +17,4 @@ spec:
         image: <your-docker-registry>/addition:<tag>
         ports:
         - containerPort: 8080
+          Port: 8080
