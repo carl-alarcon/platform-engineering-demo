@@ -1,13 +1,5 @@
-FROM node:14
+FROM nginx
 
-WORKDIR /app
+COPY ./index.html /usr/share/nginx/html/index.html
 
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 8080
-
-CMD [ "npm", "start" ]
+COPY ./nginx/default.conf /etc/nginx/sites-available/default.conf

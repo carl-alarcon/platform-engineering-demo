@@ -10,7 +10,7 @@ document.getElementById('add').addEventListener('click', function() {
     const number1 = formData.get('number1');
     const number2 = formData.get('number2');
     const data = {number1, number2};
-    fetch(`${addServiceEndpoint}/add`, {
+    fetch(`/add`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
