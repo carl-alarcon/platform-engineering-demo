@@ -1,9 +1,3 @@
-// Assuming your service name is 'y-calculator-service' and it's exposed on port 80
-const addServiceEndpoint =  process.env.ADDITION_SERVICE;
-const subtractServiceEndpoint =  process.env.SUBTRACT_SERVICE;
-const multiplyServiceEndpoint =  process.env.MULTIPLY_SERVICE;
-const divideServiceEndpoint =  process.env.DIVIDE_SERVICE;
-
 // Add event listener for 'add' button
 document.getElementById('add').addEventListener('click', function() {
     const formData = new FormData(document.getElementById('numberForm'));
@@ -26,7 +20,7 @@ document.getElementById('add').addEventListener('click', function() {
     });
 });
 
-// Add event listener for 'ubtract' button
+// Add event listener for 'subtract' button
 document.getElementById('subtract').addEventListener('click', function() {
     const formData = new FormData(document.getElementById('numberForm'));
     const number1 = formData.get('number1');
