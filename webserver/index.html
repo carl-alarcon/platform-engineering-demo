@@ -52,18 +52,20 @@
 </head>
 <body>
     <div class="container">
-        <form id="numberForm" method="post">
+        <form id="numberForm" method="POST">
             <label for="number1">Number 1:</label>
             <input type="text" id="number1" name="number1" required>
             <label for="number2">Number 2:</label>
             <input type="text" id="number2" name="number2" required>
-            <input type="button" id="add" formaction="/add" value="Add">
-            <input type="button" id="subtract" formaction="/subtract" value="Subtract">
-            <input type="button" id="multiply" formaction="/multiply" value="Multiply">
-            <input type="button" id="divide" formaction="/divide" value="Divide">
+            <input type="submit" id="add" formaction="/add" value="Add">
+            <input type="submit" id="subtract" formaction="/subtract" value="Subtract">
+            <input type="submit" id="multiply" formaction="/multiply" value="Multiply">
+            <input type="submit" id="divide" formaction="/divide" value="Divide">
         </form>
         <p id="result"></p>
     </div>
+   
+<!--   <script src="index.js"></script> --> 
 
 </body>
 </html>
