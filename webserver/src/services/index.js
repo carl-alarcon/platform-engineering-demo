@@ -32,7 +32,7 @@ document.getElementById('subtract').addEventListener('click', function() {
     const number1 = formData.get('number1');
     const number2 = formData.get('number2');
     const data = {number1, number2};
-    fetch(`${subtractServiceEndpoint}/subtract`, {
+    fetch(`/subtract`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ document.getElementById('multiply').addEventListener('click', function() {
     const number1 = formData.get('number1');
     const number2 = formData.get('number2');
     const data = {number1, number2};
-    fetch(`${multiplyServiceEndpoint}/multiply`, {
+    fetch(`/multiply`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ document.getElementById('divide').addEventListener('click', function() {
     const number1 = formData.get('number1');
     const number2 = formData.get('number2');
     const data = {number1, number2};
-    fetch(`${divideServiceEndpoint}/divide`, {
+    fetch(`/divide`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
